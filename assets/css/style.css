@@ -229,7 +229,7 @@ a:hover {
 }
 
 .btn-main:hover {
-  background: #2c9091;
+  background: #4372B6;
   color: #fff;
 }
 
@@ -2266,8 +2266,8 @@ figcaption {
 }
 
 #select-language {
-  background: #080C0E;
-  color: #ffffff;
+  background: #ffffff;
+  color: #080C0E;
   border: 0;
 }
 

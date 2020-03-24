@@ -7,15 +7,27 @@ Version: 1.3
 Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive, html5, css3
 */
 /*=== MEDIA QUERY ===*/
+
+:root {
+  --primary-dark-color: #0f1517;
+  --bg-color-1:         #ffffff;
+  --bg-color-2:         #234165;
+  --bg-color-3:         #0f1517;
+  --text-color-titles:  #3472b2;
+  --text-color-base:    #cfd3e0;
+  --text-color-other:   #0f1517;
+  --pal-color-3:        #17416C; /*dark imperial blue*/
+}
+
 html {
-  background-color: #080C0E;
-  color: #17416C;
+  background-color: var(--bg-color-1);
+  color: var(--text-color-base);
 }
 
 body {
-  background-color: #080C0E;
+  background-color: var(--bg-color-1);
   font-family: "Anaheim", sans-serif;
-  color: #17416C;
+  color: var(--text-color-base);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -27,7 +39,7 @@ h5,
 h6 {
   font-weight: 400;
   font-family: "Quattrocento Sans", sans-serif;
-  color: #4372B6;
+  color: var(--text-color-titles);
 }
 
 p {
@@ -48,12 +60,12 @@ pre {
 ::-moz-selection {
   /* Code for Firefox */
   color: #fff;
-  background: #080C0E;
+  background: var(--bg-color-1);
 }
 
 ::selection {
   color: #fff;
-  background: #080C0E;
+  background: var(--bg-color-1);
 }
 
 hr {
@@ -106,7 +118,7 @@ a:hover {
 }
 
 .btn:focus {
-  color: #ddd;
+  color: #ccc;
 }
 
 .btn-transparent {
@@ -115,9 +127,9 @@ a:hover {
 
 .btn-transparent:hover,
 .btn-transparent:focus {
-  background-color: #080C0E;
+  background-color: var(--bg-color-1);
   border: 1px solid transparent;
-  color: #fff;
+  color: var(--text-color-other);
 }
 
 .border-meghna {
@@ -137,7 +149,7 @@ a:hover {
   position: absolute;
   top: -4px;
   width: 50px;
-  background-color: #080C0E;
+  background-color: var(--bg-color-1);
 }
 
 .color {
@@ -163,7 +175,7 @@ a:hover {
 }
 
 .bg-one {
-  background-color: #080C0E;
+  background-color: var(--bg-color-2);
 }
 
 .bg-dark {
@@ -215,11 +227,11 @@ a:hover {
 
 a:focus,
 a:hover {
-  color: #080C0E;
+  color: var(--bg-color-1);
 }
 
 .btn-main {
-  background: #080C0E;
+  background: var(--bg-color-1);
   color: #fff;
   display: inline-block;
   font-size: 14px;
@@ -229,8 +241,8 @@ a:hover {
 }
 
 .btn-main:hover {
-  background: #4372B6;
-  color: #fff;
+  background: var(--bg-color-1);
+  color: var(--text-color-titles);
 }
 
 .mt-20 {
@@ -307,7 +319,7 @@ a:hover {
 }
 
 .title h2 span {
-  color: #080C0E;
+  color: #58d4db;
 }
 
 .title p {
@@ -323,7 +335,7 @@ a:hover {
 }
 
 .section-bg {
-  background: #292F36;
+  background: var(--bg-color-3);
 }
 
 .overly {
@@ -352,7 +364,7 @@ a:hover {
 }
 
 .header-bradcrumb a:hover {
-  color: #080C0E;
+  color: var(--bg-color-1);
 }
 
 .slick-slide {
@@ -407,7 +419,7 @@ a:hover {
   Navigation
 ==================================================================*/
 .navigation {
-  background-color: #FFFFFF;
+  background-color: var(--bg-color-1);
   width: 100%;
   margin-bottom: 0;
 }
@@ -416,8 +428,22 @@ a:hover {
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .show>.nav-link {
-  color: #080C0E;
+  color: var(--text-color-titles);
 }
+
+.navbar-dark .navbar-nav >.nav-link,
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+  color: var(--primary-dark-color);
+}
+.navbar-dark .navbar-nav >.nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.show:hover,
+.navbar-dark .navbar-nav .show>.nav-link:hover{
+  color: var(--text-color-base);
+}
+
 
 .navbar-toggler:focus {
   outline: 0;
@@ -445,7 +471,7 @@ a:hover {
 
 .hero-area:before {
   content: '';
-  background: rgba(0, 0, 0, 0.63);
+  background: rgba(0, 0, 10, 0.63);
   position: absolute;
   top: 0;
   right: 0;
@@ -460,7 +486,7 @@ a:hover {
 
 .hero-area .block .video-button {
   background: #fff;
-  color: #080C0E;
+  color: var(--bg-color-1);
   display: inline-block;
   height: 60px;
   width: 60px;
@@ -547,7 +573,7 @@ a:hover {
   About us section
 ==================================================================*/
 .about .block {
-  background: #242930;
+  background: var(--primary-dark-color);
   padding: 30px;
   border-bottom: 2px solid transparent;
   transition: .5s all;
@@ -555,7 +581,7 @@ a:hover {
 }
 
 .about .block:hover {
-  border-bottom: 2px solid #080C0E;
+  border-bottom: 2px solid var(--bg-color-1);
 }
 
 .about .block:hover .icon-box {
@@ -627,7 +653,7 @@ a:hover {
 
 .about-2 .content-block .media i {
   font-size: 30px;
-  color: #080C0E;
+  color: var(--text-color-3);
 }
 
 .about-2 .content-block .media h4 {
@@ -708,7 +734,7 @@ a:hover {
 .form-meghna input:hover,
 .form-meghna textarea:hover,
 #contact-submit:hover {
-  border-color: #080C0E;
+  border-color: var(--bg-color-1);
 }
 
 .form-meghna ::placeholder {
@@ -717,7 +743,7 @@ a:hover {
 
 #contact-submit {
   border: 1px solid rgba(236, 239, 241, 0.07);
-  background: #080C0E;
+  background: var(--bg-color-1);
   padding: 12px 0;
   width: 100%;
   margin: 0;
@@ -769,7 +795,7 @@ a:hover {
 .counters-item {
   padding: 25px 0;
   margin-bottom: 10px;
-  background: #292F36;
+  background: var(--bg-color-2);
 }
 
 .counters-item i {
@@ -800,12 +826,12 @@ a:hover {
 }
 
 .price-title {
-  background-color: #292F36;
+  background-color: var(--bg-color-2);
   padding: 30px 0 20px;
 }
 
 .price-title h3 {
-  color: #080C0E;
+  color: var(--bg-color-1);
   margin: 0 0 10px;
   text-transform: uppercase;
 }
@@ -816,7 +842,7 @@ a:hover {
 }
 
 .price-title .value {
-  color: #080C0E;
+  color: var(--bg-color-1);
   font-size: 30px;
 }
 
@@ -837,7 +863,7 @@ a:hover {
 }
 
 .pricing li:nth-child(2n) {
-  background-color: #292F36;
+  background-color: var(--bg-color-2);
 }
 
 .pricing li .btn {
@@ -861,12 +887,12 @@ a:hover {
   font-size: 16px;
   padding: 6px 20px;
   font-weight: 700;
-  color: #17416C;
+  color: var(--text-color);
   transition: .3s all;
 }
 
 .portfolio-filter .btn.active {
-  border-color: #080C0E;
+  border-color: var(--bg-color-1);
 }
 
 .portfolio-block {
@@ -925,7 +951,7 @@ a:hover {
 }
 
 .portfolio-block .caption .search-icon {
-  background: #080C0E;
+  background: var(--bg-color-1);
   width: 50px;
   height: 50px;
   color: #fff;
@@ -971,13 +997,13 @@ a:hover {
 
 .service-2 .service-item:hover i {
   background: #fff;
-  color: #080C0E;
+  color: var(--bg-color-1);
 }
 
 .service-2 .service-item i {
   font-size: 30px;
   display: inline-block;
-  background: #080C0E none repeat scroll 0 0;
+  background: var(--bg-color-1) none repeat scroll 0 0;
   border-radius: 30px;
   box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.1);
   color: #fff;
@@ -1010,14 +1036,14 @@ a:hover {
 }
 
 .skill-bar .progress .progress-bar {
-  background: #080C0E;
+  background: var(--bg-color-1);
 }
 
 /*=================================================================
   Our Team
 ==================================================================*/
 .team-member {
-  background-color: #292F36;
+  background-color: var(--bg-color-2);
   margin-bottom: 10px;
 }
 
@@ -1089,7 +1115,7 @@ a:hover {
 
 .member-photo .mask ul li a:hover {
   background-color: #fff;
-  color: #080C0E;
+  color: var(--bg-color-1);
   border: 1px solid transparent;
 }
 
@@ -1170,7 +1196,7 @@ a:hover {
 
 .owl-controls .owl-page.active span,
 .owl-controls .owl-page:hover span {
-  background-color: #080C0E;
+  background-color: var(--bg-color-1);
   border: 2px solid transparent;
 }
 
@@ -1211,12 +1237,12 @@ a:hover {
   Latest Posts
 ==================================================================*/
 .note {
-  background-color: #292F36;
+  background-color: var(--bg-color-2);
   border: 1px solid #4e595f;
 }
 
 .post-block {
-  background-color: #292F36;
+  background-color: var(--bg-color-2);
   margin-bottom: 10px;
 }
 
@@ -1264,7 +1290,7 @@ a:hover {
 }
 
 .post-meta a {
-  color: #080C0E;
+  color: var(--bg-color-1);
 }
 
 .post-meta>span {
@@ -1325,7 +1351,7 @@ a:hover {
 }
 
 .next-prev a:hover {
-  color: #080C0E;
+  color: var(--bg-color-1);
 }
 
 .next-prev .prev-post i {
@@ -1348,7 +1374,7 @@ a:hover {
 }
 
 .social-profile ul li a i:hover {
-  color: #080C0E;
+  color: var(--bg-color-1);
 }
 
 .comments-section {
@@ -1396,7 +1422,7 @@ a:hover {
 }
 
 .comment-wrap .media .media-heading a {
-  color: #080C0E;
+  color: var(--bg-color-1);
   font-size: 13px;
 }
 
@@ -1423,7 +1449,7 @@ a:hover {
 .comment-reply-form input:focus,
 .comment-reply-form textarea:focus {
   box-shadow: none;
-  border: 1px solid #080C0E;
+  border: 1px solid var(--bg-color-1);
 }
 
 .comment-reply-form textarea,
@@ -1452,7 +1478,7 @@ a:hover {
 }
 
 .post-comment {
-  background-color: #292f36;
+  background-color: var(--bg-color-2);
   ;
   padding: 20px;
   margin-top: 20px;
@@ -1492,7 +1518,7 @@ a:hover {
 }
 
 .post-time {
-  color: #17416C;
+  color: var(--text-color);
 }
 
 input#e-mail,
@@ -1525,7 +1551,7 @@ input#e-mail,
 }
 
 .social-icon ul li a:hover {
-  background: #080C0E;
+  background: var(--bg-color-1);
 }
 
 .social-icon ul li a:hover i {
@@ -1568,8 +1594,8 @@ input#e-mail,
 }
 
 #scrollUp:hover {
-  background-color: #080C0E;
-  border: 1px solid #080C0E;
+  background-color: var(--bg-color-1);
+  border: 1px solid var(--bg-color-1);
 }
 
 /*=================================================================
@@ -1995,7 +2021,7 @@ blockquote {
 }
 
 .form-control-meghna .form-control:focus {
-  border-color: #080C0E;
+  border-color: var(--bg-color-1);
   box-shadow: 0 0 0 0.2rem rgba(0, 174, 255, 0.432);
 }
 
@@ -2249,8 +2275,8 @@ figcaption {
 }
 
 .pagination .page-item .page-link:hover {
-  background: #080C0E;
-  border-color: #080C0E;
+  background: var(--bg-color-1);
+  border-color: var(--bg-color-1);
   color: #fff
 }
 
@@ -2260,14 +2286,14 @@ figcaption {
 }
 
 .pagination .page-item.active .page-link {
-  background: #080C0E;
+  background: var(--bg-color-1);
   color: #fff;
-  border-color: #080C0E;
+  border-color: var(--bg-color-1);
 }
 
 #select-language {
   background: #ffffff;
-  color: #080C0E;
+  color: var(--bg-color-1);
   border: 0;
 }
 

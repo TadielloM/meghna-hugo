@@ -468,7 +468,7 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-
+/*
 .hero-area:before {
   content: '';
   background: rgba(0, 0, 10, 0.63);
@@ -478,6 +478,7 @@ a:hover {
   bottom: 0;
   left: 0;
 }
+*/
 
 .hero-area .block {
   text-align: center;
@@ -2293,7 +2294,8 @@ figcaption {
 
 #select-language {
   background: #ffffff;
-  color: var(--bg-color-1);
+  /* color: var(--bg-color-2); */
+	color: rgba(0,0,0,.5);
   border: 0;
 }
 
@@ -2301,6 +2303,10 @@ figcaption {
   color: #6c7b8a;
   padding: 10px;
   display: block;
+}
+.banner_logo{
+	width: 60vw;
+	padding-bottom: 5%; 
 }
 
 /*# sourceMappingURL=maps/style.css.map */

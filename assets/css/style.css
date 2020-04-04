@@ -14,6 +14,7 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
   --bg-color-2:         #234165;
   --bg-color-3:         #0f1517;
   --text-color-titles:  #3472b2;
+  --text-color-titles2: #cfd3ee;
   --text-color-base:    #cfd3e0;
   --text-color-other:   #0f1517;
   --pal-color-3:        #17416C; /*dark imperial blue*/
@@ -319,7 +320,7 @@ a:hover {
 }
 
 .title h2 span {
-  color: #58d4db;
+  /* color: #58d4db; */
 }
 
 .title p {
@@ -2318,5 +2319,12 @@ figcaption {
 .languageSeparator{
 	display:none;
 }
+.titlecolor1{
+  color: var(--text-color-titles);
+}
+.titlecolor2{
+  color: var(--text-color-titles2);
+}
+
 
 /*# sourceMappingURL=maps/style.css.map */

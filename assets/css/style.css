@@ -574,6 +574,11 @@ a:hover {
 /*=================================================================
   About us section
 ==================================================================*/
+.summary{
+  margin-bottom: 5%;
+  font-size: 25px;
+}
+
 .about .block {
   background: var(--primary-dark-color);
   padding: 30px;

@@ -2308,5 +2308,15 @@ figcaption {
 	width: 60vw;
 	padding-bottom: 5%; 
 }
+.languages{
+
+	display:inline;
+}
+.activeLanguage{
+	display:none;
+}
+.languageSeparator{
+	display:none;
+}
 
 /*# sourceMappingURL=maps/style.css.map */

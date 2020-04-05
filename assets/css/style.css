@@ -2328,7 +2328,7 @@ figcaption {
 	display:none;
 }
 .languageSeparator{
-	display:none;
+	/* display:none; */
 }
 .titlecolor1{
   color: var(--text-color-titles);

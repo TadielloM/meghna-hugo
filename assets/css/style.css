@@ -582,7 +582,7 @@ a:hover {
 .about .block {
   background: var(--primary-dark-color);
   padding: 30px;
-  border-bottom: 2px solid transparent;
+  border-bottom: 10px solid transparent;
   transition: .5s all;
   margin-bottom: 20px;
   min-height: 390px;
@@ -630,14 +630,14 @@ a:hover {
 
 .about .block .icon-box:before {
   top: -56.5685px;
-  border-top: 2px solid rgba(236, 239, 241, 0.07);
-  border-right: 2px solid rgba(236, 239, 241, 0.07);
+  border-top: 24px solid rgba(236, 239, 241, 0.15);
+  border-right: 24px solid rgba(236, 239, 241, 0.15);
 }
 
 .about .block .icon-box:after {
   bottom: -56.5685px;
-  border-bottom: 2px solid rgba(236, 239, 241, 0.07);
-  border-left: 2px solid rgba(236, 239, 241, 0.07);
+  border-bottom: 24px solid rgba(236, 239, 241, 0.15);
+  border-left: 24px solid rgba(236, 239, 241, 0.15);
 }
 
 .about .block .icon-box h3 {
@@ -981,6 +981,7 @@ a:hover {
   border-left: 1px solid rgba(236, 239, 241, 0.07);
   border-top: 1px solid rgba(236, 239, 241, 0.07);
   margin-bottom: 40px;
+  min-height: 90%;
 }
 
 .service-block:hover {

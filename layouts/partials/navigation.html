@@ -30,11 +30,16 @@
 					{{ end }}
 				<!-- Language List -->
 				{{- if .Site.IsMultiLingual }}
-				<li class="nav-item nav-link languageSeparator"><b>
-					&#x25CF;	
-					</b></li>
-				<!--div id="languages"-->
-					{{ $siteLanguages := .Site.Languages}}
+
+<li class="nav-item">
+	<div class = "dropdown">
+					  <a class="dropdown-toggle nav-link languageToggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+					    Language
+					    <span class="caret"></span>
+					  </a>
+
+					  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					    {{ $siteLanguages := .Site.Languages}}
 					{{ $pageLang := .Page.Lang}}
 					{{ range .Page.AllTranslations }}
 						{{ $translation := .}}
@@ -42,14 +47,19 @@
 							{{ if eq $translation.Lang .Lang }}
 								{{ $selected := false }}
 								{{ if eq $pageLang .Lang}}
-								<li class="nav-item activeLanguage"><b><a class="nav-link" href="{{ $translation.Permalink }}">{{ $translation.Language.LanguageName }}</a></b>
+								<li class="nav-item activeLanguage"  role="presentation"><b><a class="nav-link" href="{{ $translation.Permalink }}">{{ $translation.Language.LanguageName }}</a></b>
 								{{ else }}
-								<li class="nav-item"><b><a class="nav-link" href="{{ $translation.Permalink }}">{{ $translation.Language.LanguageName }}</a></b>
+								<li class="nav-item" role="presentation"><b><a class="nav-link" href="{{ $translation.Permalink }}">{{ $translation.Language.LanguageName }}</a></b>
 								{{ end }}
 							{{ end }}
 						{{ end }}
 					{{ end }}
-				<!--/div-->
+					  </ul>
+					</div>
+</li>
+
+
+
 				{{ end }}
 				</ul>
 			</div>

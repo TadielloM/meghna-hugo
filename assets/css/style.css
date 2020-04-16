@@ -13,8 +13,11 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
   --bg-color-1:         #ffffff;
   --bg-color-2:         #234165;
   --bg-color-3:         #0f1517;
-  --text-color-titles:  #3472b2;
-  --text-color-titles2: #cfd3ee;
+  /*--text-color-titles:  rgb(36,80,133);*/
+  --text-color-titles2: rgb(0,0,0,0.7);
+  --text-color-titles3: rgb(202, 210, 218);
+  --text-color-titles4: rgb(0, 148, 255);
+  --text-color-titles: rgb(84, 149, 227);
   --text-color-base:    #cfd3e0;
   --text-color-other:   #0f1517;
   --pal-color-3:        #17416C; /*dark imperial blue*/
@@ -30,6 +33,7 @@ body {
   font-family: "Anaheim", sans-serif;
   color: var(--text-color-base);
   -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 }
 
 h1,
@@ -41,6 +45,7 @@ h6 {
   font-weight: 400;
   font-family: "Quattrocento Sans", sans-serif;
   color: var(--text-color-titles);
+  font-size: 250%;
 }
 
 p {
@@ -61,12 +66,12 @@ pre {
 ::-moz-selection {
   /* Code for Firefox */
   color: #fff;
-  background: var(--bg-color-1);
+  background: var(--primary-dark-color);
 }
 
 ::selection {
   color: #fff;
-  background: var(--bg-color-1);
+  background: var(--primary-dark-color);
 }
 
 hr {
@@ -158,7 +163,7 @@ a:hover {
 }
 
 .sub-title {
-  padding: 0 0 50px;
+  padding: 0 0 20px;
 }
 
 .sub-title>h3 {
@@ -176,7 +181,7 @@ a:hover {
 }
 
 .bg-one {
-  background-color: var(--bg-color-2);
+  background-color: var(--bg-color-1);
 }
 
 .bg-dark {
@@ -251,18 +256,19 @@ a:hover {
 }
 
 .section {
-  padding: 100px 0;
+  padding-top: 60px;
+  padding-bottom: 40px; 
 }
 
 @media (max-width: 480px) {
   .section {
-    padding: 50px 0;
+    padding: 20px 0;
   }
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 80px 0;
+    padding: 35px 0;
   }
 }
 
@@ -309,7 +315,7 @@ a:hover {
 }
 
 .title {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .title h2 {
@@ -469,17 +475,17 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-/*
+
 .hero-area:before {
   content: '';
-  background: rgba(0, 0, 10, 0.63);
+  background: rgba(0, 0, 0, 0.25);
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-*/
+
 
 .hero-area .block {
   text-align: center;
@@ -571,12 +577,24 @@ a:hover {
   z-index: -1;
 }
 
+.hero-subtitle{
+  font-size: 3rem;
+  color: white;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
 /*=================================================================
   About us section
 ==================================================================*/
 .summary{
+  color: rgb(0,0,0,.7);
   margin-bottom: 5%;
-  font-size: 25px;
+  font-size: 120%
+}
+
+.about{
+  border-top:double;
 }
 
 .about .block {
@@ -714,6 +732,7 @@ a:hover {
 
 .contact-us {
   padding-top: 50px;
+  margin-top: 75px;
 }
 
 @media (max-width: 768px) {
@@ -759,6 +778,10 @@ a:hover {
 
 .google-map #map-canvas {
   height: 400px;
+}
+
+.contact-info{
+  text-align: center;
 }
 
 .contact-info p {
@@ -1543,6 +1566,19 @@ input#e-mail,
 /*=================================================================
   Footer section
 ==================================================================*/
+.footer-img{
+  box-shadow: 0 0px 65px rgb(255, 255, 255,1);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.summary-light{
+  color: var(--text-color-base);
+  margin-bottom: 5%;
+  font-size: 120%;
+}
+
 .social-icon {
   padding: 60px 0 35px;
 }
@@ -2317,16 +2353,18 @@ figcaption {
   padding: 10px;
   display: block;
 }
+
 .banner_logo{
-	width: 60vw;
+	width: 60%;
 	padding-bottom: 5%; 
 }
+
 .languages{
 
 	display:inline;
 }
 .activeLanguage{
-	display:none;
+	/*display:none;*/
 }
 .languageSeparator{
 	/* display:none; */
@@ -2337,6 +2375,15 @@ figcaption {
 .titlecolor2{
   color: var(--text-color-titles2);
 }
+.titlecolor3{
+  color: var(--text-color-titles3);
+}
+.titlecolor4{
+  color: var(--text-color-titles4);
+}
+/*.languageToggle{
+  
+}*/
 
 
 /*# sourceMappingURL=maps/style.css.map */

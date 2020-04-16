@@ -13,9 +13,9 @@
 
 						{{ range $i,$w := split .title " "}}
 							{{ if eq $i 0 }}
-							<span class="titlecolor1"> {{$w}}</span>
+							<span class="titlecolor3"> {{$w}}</span>
 							{{ else }}
-							<span class="titlecolor2"> {{$w}}</span>
+							<span class="titlecolor4"> {{$w}}</span>
 							{{end}}
 						{{ end }}
 
@@ -24,9 +24,10 @@
 				</div>
 			</div>
 			{{"<!-- /section title -->" | safeHTML}}
-
+		</div>
+		<div class="row justify-content-center">
 			{{"<!-- Contact Details -->" | safeHTML}}
-			<div class="contact-info col-lg-6 wow fadeInUp" data-wow-duration="500ms">
+			<div class="contact-info summary-light col-lg-10 wow fadeInUp" data-wow-duration="500ms">
 				<h3>{{ .subtitle | markdownify }}</h3>
 				<p> {{ .content | markdownify }} </p>
 				<div class="contact-details">
@@ -40,7 +41,7 @@
 			</div>
 
 			{{"<!-- Contact Form -->" | safeHTML}}
-			<div class="col-lg-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+			<!-- <div class="col-lg-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
 				<form id="contact-form" class="form-meghna" method="post" action="{{ .form_action | safeURL }}" role="form">
 					<input name="e-mail" type="text" id="e-mail" autocomplete="off">
 					<div class="form-group">
@@ -61,7 +62,7 @@
 						</button>
 					</div>
 				</form>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>

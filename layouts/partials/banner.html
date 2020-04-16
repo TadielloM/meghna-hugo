@@ -14,7 +14,7 @@
 		</div>
 		{{ end }}
 		<img class="banner_logo" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .fg_image | absURL }})'" src="{{ .fg_image | absURL }}" />
-		<p>{{ .content | markdownify }}</p>
+		<h2 class="hero-subtitle">{{ .content | markdownify }}</h2>
 		{{ if .button.enable }}
 		{{ with .button }}
 		<a href="{{ .link }}" class="btn btn-transparent page-scroll">{{ .label }}</a>

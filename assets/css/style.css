@@ -615,6 +615,7 @@ a:hover {
 .summary{
   color: rgb(0,0,0,.7);
   margin-bottom: 5%;
+  margin-top: 5%;
   font-size: 120%
 }
 
@@ -623,13 +624,26 @@ a:hover {
 }
 
 .about .block {
-  background: var(--primary-dark-color);
-  padding: 20px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+/*  background: var(--primary-dark-color);
+*/  padding: 20px;
   border-bottom: 10px solid transparent;
   transition: .5s all;
   margin-bottom: 20px;
-  min-height: 330px;
+  min-height: 350px;
 }
+
+/*.about .block:before {
+  content: '';
+  background: rgba(0, 0, 0, 0.525);
+  position: absolute;
+  top: 0;
+  right: 15px;
+  bottom: 25px;
+  left: 15px;
+}*/
 
 .about .block:hover {
   border-bottom: 2px solid var(--bg-color-1);
@@ -644,10 +658,10 @@ a:hover {
   position: relative;
   padding-bottom: 100px;
 
-  /*width: 160px;
-  height: 92.38px;*/
-  width: 130px;
-  height: 84px;
+  width: 160px;
+  height: 92.38px;
+  /*width: 130px;
+  height: 84px;*/
   background-color: transparent;
   margin: 15px auto 30px;
   padding: 20px 0;
@@ -693,6 +707,14 @@ a:hover {
   color: #4372B6;
 }
 
+.about .block h3 {
+  font-size: 2.75rem
+}
+
+
+.about .block p {
+background: rgb(0,0,0,0.5);
+}
 /*=================================================================
   About us 2 section
 ==================================================================*/
@@ -1677,6 +1699,17 @@ input#e-mail,
 #scrollUp:hover {
   background-color: var(--bg-color-1);
   border: 1px solid var(--bg-color-1);
+}
+
+.thanks{
+  color: var(--bg-color-2);
+  text-align: end;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.thanks a{
+  color: var(--bg-color-2);
 }
 
 /*=================================================================

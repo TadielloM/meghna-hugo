@@ -3,15 +3,14 @@
 {{ if $data.about.about.enable }}
 {{ with $data.about.about }}
 {{"<!-- Start About Section -->" | safeHTML}}
-<section class="bg-one about section" id="about">
+<section class="bg-one about Section" id="about">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-10">
-				{{"<!-- section title -->" | safeHTML}}
-				<div class="incipit text-center wow fadeIn" data-wow-duration="1500ms">
-					{{ range .incipit_item }}
-					<h3>
-						{{ range $i,$w := split .incipit " "}}
+		<div class="row summary">
+			{{"<!-- section title -->" | safeHTML}}
+			<div class="col-lg-6">
+				<div class="wow fadeIn" data-wow-duration="1500ms">
+					<h3 class="text-center">
+						{{ range $i,$w := split .problem " "}}
 							{{ if eq $i 0 1 2 }}
 							<span class="titlecolor1"> {{$w}}</span>
 							{{ else }}
@@ -19,32 +18,43 @@
 							{{end}}
 						{{ end }}
 					</h3>
-					<div class="summary text-center">
-						<p>
-						{{ .incipit_continue | markdownify }}
-						</p>
+					
+					<div class="summary">
+						<ul>
+							{{ range .problem_items }}
+							<li>
+								{{ .bullet | markdownify }}
+							</li>
+							{{end}}
+						</ul>
 					</div>
-					{{end}}
-					<div class="border-meghna"></div>
 				</div>
 			</div>
-			{{"<!-- /section title -->" | safeHTML}}
-		</div>
-		<div class="row justify-content-center">
-			<div class="col-lg-12">
-				<div class="our_solution text-center wow fadeIn" data-wow-duration="1500ms">
-				<h2>
-					{{ range $i,$w := split .our_solution " "}}
-						{{ if eq $i 0 }}
-						<span class="titlecolor1"> {{$w}}</span>
-						{{ else }}
-						<span class="titlecolor2"> {{$w}}</span>
-						{{end}}
-					{{ end }}
-				</h2>
+			<div class="col-lg-6">
+				<div class="wow fadeIn" data-wow-duration="1500ms">
+					<h3 class="text-center">
+						{{ range $i,$w := split .solution " "}}
+							{{ if eq $i 0 1 2 }}
+							<span class="titlecolor1"> {{$w}}</span>
+							{{ else }}
+							<span class="titlecolor2"> {{$w}}</span>
+							{{end}}
+						{{ end }}
+					</h3>
+					
+					<div class="summary">
+						<ul>
+							{{ range .solution_items }}
+							<li>
+								{{ .bullet | markdownify }}
+							</li>
+							{{end}}
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
+		{{"<!-- /section title -->" | safeHTML}}
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				{{"<!-- section title -->" | safeHTML}}
@@ -77,7 +87,7 @@
 			{{ range .about_item }}
 			{{"<!-- About item -->" | safeHTML}}
 			<div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
-				<div class="block">
+				<div class="block" style='background-image: url("{{ .bg_image_webp | absURL }}")'>
 					<div class="icon-box">
 						{{with .icon}}<i class="{{ . }}"></i>{{ end }}
 					</div>

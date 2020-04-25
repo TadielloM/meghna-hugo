@@ -614,8 +614,8 @@ a:hover {
 
 .summary{
   color: rgb(0,0,0,.7);
-  margin-bottom: 5%;
-  margin-top: 5%;
+  margin-bottom: 2%;
+  /*margin-top: 5%;*/
   font-size: 120%
 }
 
@@ -635,16 +635,6 @@ a:hover {
   min-height: 350px;
 }
 
-/*.about .block:before {
-  content: '';
-  background: rgba(0, 0, 0, 0.525);
-  position: absolute;
-  top: 0;
-  right: 15px;
-  bottom: 25px;
-  left: 15px;
-}*/
-
 .about .block:hover {
   border-bottom: 2px solid var(--bg-color-1);
 }
@@ -655,6 +645,7 @@ a:hover {
 }
 
 .about .block .icon-box {
+  color: var(--bg-color-2);
   position: relative;
   padding-bottom: 100px;
 
@@ -1620,7 +1611,6 @@ input#e-mail,
   Footer section
 ==================================================================*/
 .footer-img{
-  box-shadow: 0 0px 65px rgb(255, 255, 255,1);
     background-color: rgba(255, 255, 255, 1);
     padding: 10px;
     border-radius: 10px;

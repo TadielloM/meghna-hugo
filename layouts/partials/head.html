@@ -4,9 +4,9 @@
 
 	{{ "<!-- mobile responsive meta -->" | safeHTML }}
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="description" content="{{ .Params.description }}" />
-	<meta itemprop="description" content="{{ .Params.description }}" />
-	<meta property="og:description" content="{{ .Params.description }}" />
+	<meta name="description" content="{{ $.Site.Params.description }}" />
+	<meta itemprop="description" content="{{ $.Site.Params.description }}" />
+	<meta property="og:description" content="{{ $.Site.Params.description }}" />
 
 
 	{{ with .Site.Params.author }}

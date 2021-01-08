@@ -13,11 +13,11 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
   --bg-color-1:         #ffffff;
   --bg-color-2:         #234165;
   --bg-color-3:         #0f1517;
-  /*--text-color-titles:  rgb(36,80,133);*/
+  --text-color-titles:  rgb(36,80,133);
   --text-color-titles2: rgb(0,0,0,0.7);
   --text-color-titles3: rgb(202, 210, 218);
   --text-color-titles4: rgb(0, 148, 255);
-  --text-color-titles: rgb(84, 149, 227);
+  --text-color-titles1: rgb(84, 149, 227);
   --text-color-base:    #cfd3e0;
   --text-color-other:   #0f1517;
   --pal-color-3:        #17416C; /*dark imperial blue*/
@@ -101,7 +101,7 @@ a:hover {
 
 a:focus,
 a:hover {
-  color: #6CB670;
+  color: var(--text-color-titles1);
 }
 
 .kill-margin-bottom {
@@ -160,7 +160,7 @@ a:hover {
 }
 
 .color {
-  color: #6CB670;
+  color: var(--text-color-titles1);
 }
 
 .sub-title {
@@ -1738,9 +1738,9 @@ input#e-mail,
 }
 
 .blog-icon {
-  border: 1px solid #6CB670;
+  border: 1px solid var(--text-color-titles3);
   border-radius: 50%;
-  color: #6CB670;
+  color: var(--text-color-titles3);
   display: inline-block;
   padding: 16px 20px;
 }
@@ -1826,7 +1826,7 @@ input#e-mail,
 }
 
 .post-meta a:hover {
-  color: #6CB670;
+  color: var(--text-color-titles1);
 }
 
 .post-excerpt .more {
@@ -1840,7 +1840,7 @@ input#e-mail,
 }
 
 .post-excerpt .more a:hover {
-  background-color: #6CB670;
+  background-color: var(--text-color-titles1);
   color: #fff;
 }
 
@@ -1890,7 +1890,7 @@ aside.widget {
 .tab-post-nav li.active a {
   border-top: 3px solid #6cb670;
   background-color: #2F383D;
-  color: #6CB670;
+  color: var(--text-color-titles1);
 }
 
 .tab-pane.active .clearfix:first-child {
@@ -1926,7 +1926,7 @@ aside.widget {
 
 .categories>li:hover a {
   padding-left: 10px;
-  color: #6CB670;
+  color: var(--text-color-titles1);
 }
 
 .categories>li:last-child {
@@ -1947,7 +1947,7 @@ aside.widget {
 }
 
 .widget-content .tag:hover {
-  background-color: #6CB670;
+  background-color: var(--text-color-titles1);
   color: #fff;
 }
 
@@ -1983,7 +1983,7 @@ aside.widget {
 
 .post-pagination ul li a:hover,
 .post-pagination ul li.active a {
-  background-color: #6CB670;
+  background-color: var(--text-color-titles1);
   color: #fff;
 }
 
@@ -2012,7 +2012,7 @@ blockquote {
 }
 
 .next-prev a:hover {
-  color: #6CB670;
+  color: var(--text-color-titles1);
 }
 
 .prev-post i {
@@ -2084,7 +2084,7 @@ blockquote {
 
 .author-comment cite a:hover,
 .replay:hover {
-  color: #6CB670;
+  color: var(--text-color-titles1);
   text-decoration: underline;
 }
 
@@ -2110,7 +2110,7 @@ blockquote {
 }
 
 #comment-form .form-control:hover {
-  border-color: #6CB670;
+  border-color: var(--text-color-titles1);
 }
 
 .form-group:last-child,
